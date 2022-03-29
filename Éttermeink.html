@@ -10,52 +10,58 @@
 </head>
 <body>
   <div id="menu">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-sm bg-light navbar-light">
       <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Egyedi.html">Egyedi pizzák</a>
+              <a class="nav-link" href="Egyedi.html" role="button">Egyedi pizzák</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="/Éttermeink.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-               Éttermeink
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="/Éttermeink.html#egy">Egy</a></li>
-                <li><a class="dropdown-item" href="/Éttermeink.html#ketto">Kettő</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Házhoz szállítás</a></li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Éttermeink</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Éttermeink.html#Gyor">Győr</a></li>
+                <li><a class="dropdown-item" href="Éttermeink.html#Gonyu">Gönyü</a></li>
               </ul>
             </li>
           </ul>
         </div>
       </div>
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="..." alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="..." alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="..." alt="Third slide">
-      </div>
+    </nav>
+</div>    
+  
+      
+      <div class="container">
+      <div id="carouselPictures" class="carousel slide" data-bs-ride="carousel">
+            
+        <div class="carousel-inner">
+            <div class="carousel-item active carousel-item-start">
+                <img src="placeholder.png" class="d-block w-100" alt="Győr">
+            </div>
+            <div class="carousel-item carousel-item-next carousel-item-start">
+                <img src="placeholder.png" class="d-block w-100" alt="Gönyu">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPictures" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPictures" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
-    
+<div id="Gyor">Lorem Ipsum</div>
+
+
+
+<div id="Gonyu"></div><!--Gönyü-->
     <div id="hazhozszallitas"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
