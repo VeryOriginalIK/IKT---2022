@@ -1,48 +1,51 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzaház Pizzázó</title>
     
     <body>
-      <header>
         <div id="menu">
-          <nav class="navbar fixed-top navbar-expand-sm bg-light navbar-light">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
+              <a class="navbar-brand" href="index.html">Home</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               </button>
-              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="Egyedi.html" role="button">Egyedi pizzák</a>
+                    <a class="nav-link active" aria-current="page" href="#">Egyedi pizzák</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Éttermeink</a>
-                    <ul class="dropdown-menu">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Éttermeink
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                       <li><a class="dropdown-item" href="Éttermeink.html#Gyor">Győr</a></li>
-                      <li><a class="dropdown-item" href="Éttermeink.html#Gonyu">Gönyű</a></li>
+                <li><a class="dropdown-item" href="Éttermeink.html#Gonyu">Gönyű</a></li>
                     </ul>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
-      </div>
-      </header>
-        <label for="exampleDataList" class="form-label">Feltétek</label>
-        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Feltétek">
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Pizzatészta">
         <datalist id="datalistOptions">
-          <option value="Sonkás">
-          <option value="Mozzarellás">
-          <option value="Mozzarellás">
-          <option value="Erős Pista">
+          <option value="Hagyományos">
+          <option value="Édes">
+          <option value="Sós">
+          <option value="Gluténmentes">
+          </option>
+        </datalist>
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Pizzatészta">
+        <datalist id="datalistOptions">
+          <option value="Hagyományos">
+          <option value="Édes">
+          <option value="Sós">
+          <option value="Gluténmentes">
           </option>
         </datalist>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
