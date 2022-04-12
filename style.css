@@ -1,0 +1,16 @@
+.row{
+    padding: 10px;
+}
+
+.card-text{
+    text-align: center;
+}
+
+#kep1, #kep2, #kep3{
+    width: 200px;
+    height: 250px;
+}
+
+body{
+    margin: 20px;
+}
