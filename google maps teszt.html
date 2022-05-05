@@ -3,7 +3,7 @@
   <head>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <meta charset="UTF-8" />
-    <title>Find a route using Geolocation and Google Maps API</title>
+    <title>Google Maps teszt</title>
   </head>
   <body>
     <a id="demo"></a>
@@ -16,11 +16,14 @@
       <label for="cim">Cél:</label>
       <input class="mb-3" type="text" id="cim" name="cim" placeholder="A címem" value="" id="cim"/>
       <a id="cim-link" href="#">Helyzet lekérdezése</a><br>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <input onclick="getjson()" type="submit" />
+      <input type="reset" />
+    </form>
+    <p id="error"></p>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSwENCRBGSM1dSAY5Ts_0t-0Ne1hlI8wo&libraries=places&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSwENCRBGSM1dSAY5Ts_0t-0Ne1hlI8wo&libraries=places">
   </script>
-  
   <!--külső fájlként valamiért nem megy, egyelőre itt lesz-->
   <script>
 
@@ -30,7 +33,7 @@
         $("#error").text("Your browser doesn't support the Geolocation API");
         return;
       }
-      $("#from-link, #cim-link").click(function(event) {
+      $("#cim-link").click(function(event) {
         event.preventDefault();
         var addressId = this.id.substring(0, this.id.indexOf("-"));
 
@@ -51,16 +54,12 @@
         },
         {
           enableHighAccuracy: true,
-          timeout: 10 * 1000 // 10 seconds
+          timeout: 10 * 1000
         });
-      });
-
-      $("#calculate-route").submit(function(event) {
-        event.preventDefault();
-        calculateRoute($("#from").val(), $("#cim").val());
       });
     });
 
+/* hely autocomplete*/
     var searchInput = 'cim';
       
           $(document).ready(function () {
@@ -80,22 +79,18 @@
   var etterem = document.getElementById("from").value;}
 
 /* végpont lekérése*/
-          function etterem() {
+          function cel() {
   var cim = document.getElementById("cim").value;}
   
   /*adatok lekérése Googletől*/
-  var link = "https://maps.googleapis.com/maps/api/distancematrix/json?destinations=${cim}&origins=${etterem}&units=metric&key=AIzaSyDSwENCRBGSM1dSAY5Ts_0t-0Ne1hlI8wo";
+ var linkmmaker = `https://maps.googleapis.com/maps/api/distancematrix/json?destinations=${cim}&origins=${etterem}&units=metric&key=AIzaSyDSwENCRBGSM1dSAY5Ts_0t-0Ne1hlI8wo`;
+ let link = text.valueOf(linkmmaker);
+
  function getjson() {
-   fetch (link)
-   .then(response => response.json())
-   then(data => {console.log(data)
-   })
+  fetch (link);
+   
  }
 
  </script>
-      <input onclick="getjson()" type="submit" />
-      <input type="reset" />
-    </form>
-    <p id="error"></p>
   </body>
 </html>
