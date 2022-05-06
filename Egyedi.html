@@ -6,6 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzaház Pizzázó</title>
+    <style>
+      body{
+        background-color: floralwhite;
+        ;
+      }
+      #egyenibevezeto{
+       
+        color: darkslateblue;
+        font-weight: bold;
+        font-style: italic;
+      }
+      #belsoegyenibevezeto{
+        border-radius: 20px;
+      }
+      #egyedititle{
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: xx-large;
+        font-variant: normal;
+        font-style: oblique;
+      }
+      
+    </style>
     
     <body>
         <div id="menu">
@@ -33,32 +56,49 @@
             </div>
           </nav>
         </div>
-        <h2 style="text-align:center">Egyedi pizza készítő</h2>
+        <h2 style="text-align:center" id="egyedititle">Egyedi pizza készítő</h2>
+        <div class="container m-3 p-4 h-50 justify-content-center" id="egyenibevezeto" style="width: 800px;">
+          <div class="p-4 col-12 col-md-6 col-sm-4" style="background-color: navajowhite;" id="belsoegyenibevezeto">
+
+            <h3>
+              Lehetőséged van egyéni pizza megalkotására!
+            </h3>
+            <h4>
+              Válassz ízlésednek megfelelően!
+            </h4>
+          </div>
+        </div>
+          <div class="container">
+            <h4>Tészták</h4>
+            <h6>Válaszd ki a számodra megfelelő tésztát!</h6>
+            <form>
+              <label class="radio-inline">
+                <input type="radio" name="optradio" checked>Hagyományos
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio">Édes
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio"> Laktózmentes
+              </label>
+            </form>
+          </div>
           
-          <h4>Tészták</h4>
-          <form>
-            <label class="radio-inline">
-              <input type="radio" name="optradio" checked>Hagyományos
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="optradio">Édes
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="optradio"> Laktózmentes
-            </label>
-          </form>
-      <h4>Szószok</h4>
-      <div class="form-group">
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option>Paradicsomszósz</option>
-          <option>Erős Pista</option>
-          <option>Sajt</option>
-        </select>
+      <div class="container">
+        <h4>Szószok</h4>
+        <div class="form-group">
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>Paradicsomszósz</option>
+            <option>Erős Pista</option>
+            <option>Sajt</option>
+          </select>
+        </div>
       </div>
 
         <div id="egyedi">
 
         </div>
+        
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5s.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="script.js"></script>
