@@ -7,6 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzaház Pizzázó</title>
+    <style>
+      
+      body{
+        background-color: floralwhite;
+      }
+      #kep{
+        width: 400px;
+        height: 250px;
+      }
+      #carouselkep{
+        width: 800px;
+        height: 500px;
+      }
+    </style>
 </head>
 <body style="scroll-behavior: smooth">
   <div id="menu">
@@ -39,13 +53,13 @@
                     
                 <div class="carousel-inner">
                     <div class="carousel-item active carousel-item-start">
-                        <img src="1.jpg" id="kep1" class="d-block w-100" alt="" title="Kellemes látvány">
+                        <img src="1.jpg" id="kep1" class="d-block w-100" alt="" title="Kellemes látvány" id="carouselkep">
                   </div>
                     <div class="carousel-item carousel-item-next carousel-item-start">
-                        <img src="2.jpg" id="kep2" class="d-block w-100" alt="" title="Egy szelet finomság">
+                        <img src="2.jpg" id="kep2" class="d-block w-100" alt="" title="Egy szelet finomság" id="carouselkep">
                     </div>
                     <div class="carousel-item carousel-item-next carousel-item-start">
-                      <img src="3.jpg" id="kep3" class="d-block w-100" alt="" title="A pizza és a bor kellemes kombinációja">
+                      <img src="3.jpg" id="kep3" class="d-block w-100" alt="" title="A pizza és a bor kellemes kombinációja" id="carouselkep">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselPictures" data-bs-slide="prev">
@@ -57,13 +71,15 @@
               </div>
             </div>
       </div>
-    <div class=" m-3 p-4 bg-info fst-italic d-flex justify-content-center">
-        <h3>Az alábbi gyűjteményben összegyűjtjük leghíresebb pizzáinkat:</h3>
+    <div class=" m-3 p-4 mx-auto" style="color: darkslateblue; background-color: navajowhite; width: 900px;">
+        <h3 class="fst-italic mb-3 opacity-100 justify-content-center" >Az alábbi gyűjteményben megtalálhatóak legnépszerűbb pizzáink:</h3>
+        <h6 class="mb-3 opacity-80">A teljes listát a gombra kattintva találjátok!</h6>
+        <a href="#" class="btn btn-outline-success btn-rounded stretched-link" role="button">Megnézem!</a>
     </div>
       <div class="row container mx-auto">
         <div class="text-center"></div>
-        <div class="card col-12 col-md-6 col-lg-4">
-          <img src="szalonnas-lilahagymas.jpg" alt="szalonnas-lilahagymas" title="Szalonnás-lilahagymás" class="card-img-top mx-auto">
+        <div class="card col-12 col-md-6 col-lg-4 card-shadow-8 rounded-5">
+          <img src="szalonnas-lilahagymas.jpg" alt="szalonnas-lilahagymas" title="Szalonnás-lilahagymás" class="card-img-top mx-auto" id="kep">
           <div class="card-body">
             <h1 class="card-title mark" data-bs-toggle="collapse" data-bs-target="#collapseszalonnas-lilahagymas">Szalonnás-lilahagymás</h1>
             <div class="collapse" id="collapseszalonnas-lilahagymas">
@@ -74,7 +90,7 @@
           </div>
         </div>
         <div class="card col-12 col-md-6 col-lg-4">
-          <img src="kolbaszos.png" alt="kolbaszos" title="Kolbászos" class="card-img-top mx-auto">
+          <img src="kolbaszos.png" alt="kolbaszos" title="Kolbászos" class="card-img-top mx-auto" id="kep">
           <div class="card-body">
               <h1 class="card-title mark" data-bs-toggle="collapse" data-bs-target="#collapsekolbaszos">Kolbászos</h1>
               <div class="collapse" id="collapsekolbaszos">
@@ -85,7 +101,7 @@
           </div>
         </div>
         <div class="card col-12 col-md-6 col-lg-4">
-          <img src="olasz.jpg" alt="olasz" title="Olasz" class="card-img-top mx-auto">
+          <img src="olasz.jpg" alt="olasz" title="Olasz" class="card-img-top mx-auto" id="kep">
           <div class="card-body">
             <h1 class="card-title mark" data-bs-toggle="collapse" data-bs-target="#collapseolasz">Olasz</h1>
             <div class="collapse" id="collapseolasz">
@@ -96,7 +112,7 @@
           </div>
         </div>
         <div class="card col-12 col-md-6 col-lg-4">
-          <img src="vegan.jpg" alt="vegan" title="Vegán" class="card-img-top mx-auto">
+          <img src="vegan.jpg" alt="vegan" title="Vegán" class="card-img-top mx-auto" id="kep">
           <div class="card-body">
             <h1 class="card-title mark" data-bs-toggle="collapse" data-bs-target="#collapsevegan">Vegán</h1>
             <div class="collapse" id="collapsevegan">
@@ -107,7 +123,7 @@
           </div>
         </div>
         <div class="card col-12 col-md-6 col-lg-4">
-          <img src="kukoricas-sajtos.jpg" alt="kukoricas-sajtos" title="Kukoricás-sajtos" class="card-img-top mx-auto">
+          <img src="kukoricas-sajtos.jpg" alt="kukoricas-sajtos" title="Kukoricás-sajtos" class="card-img-top mx-auto" id="kep">
           <div class="card-body">
             <h1 class="card-title mark" data-bs-toggle="collapse" data-bs-target="#collapsekukoricassajtos">Kukoricás-sajtos</h1>
             <div class="collapse" id="collapsekukoricassajtos">
@@ -118,7 +134,7 @@
           </div>
         </div>
         <div class="card col-12 col-md-6 col-lg-4">
-          <img src="ananaszos.jfif" alt="ananaszos" title="Ananászos" class="card-img-top mx-auto">
+          <img src="ananaszos.jfif" alt="ananaszos" title="Ananászos" class="card-img-top mx-auto" id="kep">
           <div class="card-body">
             <h1 class="card-title mark" data-bs-toggle="collapse" data-bs-target="#collapseananaszos">Ananászos</h1>
             <div class="collapse" id="collapseananaszos">
@@ -131,7 +147,7 @@
   
         <br>
         <div class="container">
-          <table class="table table-striped col-12 col-md-6 col-lg-4 table-responsive">
+          <table class="table table-striped col-12 col-md-6 col-lg-4 table-responsive mb-5">
             <thead>
               <tr>
                 <th scope="col">Pizza</th>
@@ -188,8 +204,8 @@
           </table>
         </div> 
           <div class="col-12 col-lg-6">
-            <p class="text-dark bg-light fst-italic d-flex justify-content-center">Felnőttméretű pizzák</p>
-            <table class="table table-striped table-responsive">
+            <p class="text-dark bg-light fst-italic d-flex justify-content-center" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Felnőttméretű pizzák</p>
+            <table class="table table-striped table-responsive mb-3">
               <thead>
                 <tr>
                   <th scope="col" class="text-light bg-dark">Pizza neve
@@ -226,8 +242,8 @@
             </table>
           </div>
           <div class="col-12 col-lg-6">
-            <p class="text-dark bg-light fst-italic d-flex justify-content-center">Gyerekméretű pizzák</p>
-            <table class="table table-striped table-responsive">
+            <p class="text-dark bg-light fst-italic d-flex justify-content-center" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Gyerekméretű pizzák</p>
+            <table class="table table-striped table-responsive mb-3">
               <thead>
                 <tr>
                   <th scope="col" class="text-light bg-dark">Pizza neve</th>
