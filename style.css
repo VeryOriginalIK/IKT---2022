@@ -16,6 +16,9 @@ body{
     height: 250px;
 }
 
+body{
+    background-color: aquamarine !important;
+}
 #map {
     width: 500px;
     height: 400px;
