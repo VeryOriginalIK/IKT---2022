@@ -27,6 +27,10 @@
         font-variant: normal;
         font-style: oblique;
       }
+
+      form .mb-3tesztafajta{
+        justify-content: space-between;
+      }
       
     </style>
     
@@ -57,38 +61,6 @@
           </nav>
         </div>
         <h2 style="text-align:center" id="egyedititle">Egyedi pizza készítő</h2>
-          <div class="container">
-            <h4>Tészták</h4>
-            <h6>Válaszd ki a számodra megfelelő tésztát!</h6>
-            <form>
-              <fieldset>
-              <label class="radio-inline">
-                <input type="radio" name="optradio" checked>Hagyományos
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="optradio">Édes
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="optradio"> Laktózmentes
-              </label>
-            </fieldset>
-            </form>
-          </div>
-          
-      <div class="container" id="form">
-        
-        <h4>Szószok</h4>
-        <div class="form-group">
-          <select class="form-control" id="exampleFormControlSelect1">
-            <div style="letter-spacing: 20px;">
-            <option>Paradicsomszósz</option>
-            <option>Erős Pista</option>
-            <option>Sajt</option>
-          </div>
-          </select>
-        </div>
-      </div>
-      
       
       <div class="container" id="form">
         <form>
@@ -99,19 +71,15 @@
               <option>Gyerekméretű</option>
             </select>
           </div>
-          <div class="form-group">
+          <div class="form-group mb-3">
             <h4>Telefonszám</h4>
-            <input type="email" class="form-control" placeholder="Írd be a telefonszámod">
+            <input class="form-control" placeholder="Írd be a telefonszámod">
           </div>
-          <div class="form-group">
+          <div class="form-group mb-3">
             <h4>Email cím</h4>
-            <input type="password" class="form-control" placeholder="Írd be az email címed">
+            <input class="form-control" placeholder="Írd be az email címed">
           </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-         <div class="mb-3">
+         <div class="mb-3 d-flex justify-content-between justify-content-sm-around" id="tesztafajta">
             <h4>Tésztafajta</h4>
             <label class="radio-inline">
               <input type="radio" name="optradio" checked>Hagyományos
@@ -126,7 +94,7 @@
           <div class="mb-3">
           <h4>Szószok</h4>
         <div class="form-group">
-          <select class="form-control" id="exampleFormControlSelect1">
+          <select class="form-control">
             <div style="letter-spacing: 20px;">
             <option>Paradicsomszósz</option>
             <option>Erős Pista</option>
