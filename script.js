@@ -2,7 +2,7 @@
     $(document).ready(function() {
 
         if (typeof navigator.geolocation == "undefined") {
-          $("#error").text("Your browser doesn't support the Geolocation API");
+          $("#error").text("A böngésző nem támogatja a helymeghatározást");
           return;
         }
         $("#cim-link").click(function(event) {
@@ -47,18 +47,39 @@
             });
   
   /* kezdőpont lekérése*/
+
             function etterem() {
     var etterem = document.getElementById("from").value;}
   
   /* végpont lekérése*/
             function cel() {
     var cim = document.getElementById("cim").value;}
-    
-    /*adatok lekérése Googletől*/
-   var link = `https://maps.googleapis.com/maps/api/distancematrix/json?destinations=${cim}&origins=${etterem}&units=metric&key=AIzaSyDSwENCRBGSM1dSAY5Ts_0t-0Ne1hlI8wo`;
   
+  /*json lekérése*/
    function getjson() {
-    fetch (link);
-     
-   }
+    var origin1 = $('#from')[0].value;
+    var destinationA = $('#cim')[0].value;
+    
+    var service = new google.maps.DistanceMatrixService();
+    service.getDistanceMatrix(
+      {
+      origins: [origin1],
+      destinations: [destinationA],
+      travelMode: 'DRIVING',
+      }, callback);
+  
+    function callback(response, status) {
+      console.log(response) /*response az a google válasza */
+      
+      jsonRespRouteDistance = new JSONObject(httpResponse)
+                                        .getJSONArray("rows")
+                                        .getJSONObject(0)
+                                        .getJSONArray ("elements")
+                                        .getJSONObject(0)
+                                        .getJSONObject("duration");
+                                        
+
+var duration = jsonRespRouteDuration.get("text").toString();
+     }
+    }
   
