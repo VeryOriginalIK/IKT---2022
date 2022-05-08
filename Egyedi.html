@@ -36,6 +36,9 @@
         border-radius: 5px;
         
       }
+      #mezo{
+        width: 350px;
+      }
     </style>
     
     <body>
@@ -65,12 +68,13 @@
           </nav>
         </div>
         <h2 style="text-align:center" id="egyedititle">Egyedi pizza készítő</h2>
-      
-      <div class="container" id="form">
+    
+
+      <div class="container col-12 col-lg-8" id="form">
         <form>
           <div class="mb-3">
             <h4>Mérete</h4>
-            <select class="form-control">
+            <select class="form-control" id="mezo">
               <option>Felnőtt méretű</option>
               <option>Gyerekméretű</option>
             </select>
@@ -90,7 +94,7 @@
           </div>
           <div class="mb-3">
           <h4>Szószok</h4>
-        <div class="form-group">
+        <div class="form-group" id="mezo">
           <select class="form-control">
             <div style="letter-spacing: 20px;">
             <option>Paradicsomszósz</option>
@@ -106,10 +110,10 @@
           <input type="radio" name="optradio" checked>Kolbász
         </label>
         <label class="radio-inline">
-          <input type="radio" style="margin-left: 30px;" name="optradio">Sertésszalonna
+          <input type="radio" style="margin-left: 5px;" name="optradio">Sertésszalonna
         </label>
         <label class="radio-inline">
-          <input type="radio" style="margin-left: 30px;" name="optradio"> Füstölt főtt tarja
+          <input type="radio" style="margin-left: 5px;" name="optradio">Füstölt főtt tarja
         </label>
       </div>
       <div class="mb-3">
@@ -118,46 +122,32 @@
           <input type="radio" name="optradio" checked>Olívabogyó
         </label>
         <label class="radio-inline">
-          <input type="radio" style="margin-left: 20px;" name="optradio" checked>Zöldpaprika
+          <input type="radio" style="margin-left: 10px;" name="optradio" checked>Zöldpaprika
         </label>
         <label class="radio-inline">
-          <input type="radio" style="margin-left: 20px;" name="optradio" checked>Lilahagyma
+          <input type="radio" style="margin-left: 10px;" name="optradio" checked>Lilahagyma
         </label>
         <label class="radio-inline">
-          <input type="radio" style="margin-left: 20px;" name="optradio" checked>Gomba
+          <input type="radio" style="margin-left: 10px;" name="optradio" checked>Gomba
         </label>
         <label class="radio-inline">
-          <input type="radio" style="margin-left: 20px;" name="optradio" checked>Paradicsom
+          <input type="radio" style="margin-left: 10px;" name="optradio" checked>Paradicsom
         </label>
       </div>
       <div class="form-group mb-3">
         <h4>Telefonszám</h4>
-        <input class="form-control" placeholder="Írd be a telefonszámod">
+        <input class="form-control" id="mezo" placeholder="Írd be a telefonszámod">
       </div>
       <div class="form-group mb-3">
         <h4>Email cím</h4>
-        <input class="form-control" placeholder="Írd be az email címed">
+        <input class="form-control" id="mezo" placeholder="Írd be az email címed">
       </div>
           <button type="submit" class="btn btn-success">OK</button>
           <button type="reset" class="btn btn-outline-success" id="resetbutton">Visszaállítás</button>
         </form>
       </div>
-      
-      
-      <div class="form-group mb-3">
-        <h4>Telefonszám</h4>
-        <input class="form-control" placeholder="Írd be a telefonszámod">
-      </div>
-      <div class="form-group mb-3">
-        <h4>Email cím</h4>
-        <input class="form-control" placeholder="Írd be az email címed">
-      </div>
-      <button type="submit" class="btn btn-success">OK</button>
-      <button type="reset" class="btn btn-outline-success" id="resetbutton">Visszaállítás</button>
-    </form>
-    </div>
-      
-      
+   
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5s.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="script.js"></script>
