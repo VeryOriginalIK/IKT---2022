@@ -1,0 +1,53 @@
+body{
+    background-color: floralwhite;
+    ;
+  }
+  #egyenibevezeto{
+   
+    color: darkslateblue;
+    font-weight: bold;
+    font-style: italic;
+  }
+  #belsoegyenibevezeto{
+    border-radius: 20px;
+  }
+  #egyedititle{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    font-variant: normal;
+    font-style: oblique;
+  }
+
+  form .mb-3tesztafajta{
+    justify-content: space-between;
+  }
+  #resetbutton{
+    border: 1px rgba(23, 183, 23, 0.944) solid;
+    border-radius: 5px;
+    
+  }
+  
+  
+  #tablecim{
+    font-size: 150%;
+
+  }
+
+  
+  #bigtable{
+    background-color: seashell ;
+
+    border: 3px solid;
+    border-color: darkblue;
+    border-radius: 15px;
+    border-style: solid;
+  }
+
+  #tablecim{
+    font-size: 150%;
+    font-style: italic;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
