@@ -54,32 +54,32 @@
   /* végpont lekérése*/
             function cel() {
     var cim = document.getElementById("cim").value;}
-  
-  /*json lekérése*/
-   function getjson() {
-    var origin1 = $('#from')[0].value;
-    var destinationA = $('#cim')[0].value;
-    
-    var service = new google.maps.DistanceMatrixService();
-    service.getDistanceMatrix(
-      {
-      origins: [origin1],
-      destinations: [destinationA],
-      travelMode: 'DRIVING',
-      }, callback);
-  
-    function callback(response, status) {
-      console.log(response) /*response az a google válasza */
-      
-      jsonRespRouteDistance = new JSONObject(httpResponse)
-                                        .getJSONArray("rows")
-                                        .getJSONObject(0)
-                                        .getJSONArray ("elements")
-                                        .getJSONObject(0)
-                                        .getJSONObject("duration");
-                                        
 
-var duration = jsonRespRouteDuration.get("text").toString();
-     }
-    }
-  
+    function getjson() {
+      var origin1 = $('#from')[0].value;
+      var destinationA = $('#cim')[0].value;
+      
+      var service = new google.maps.DistanceMatrixService();
+      service.getDistanceMatrix(
+        {
+        origins: [origin1],
+        destinations: [destinationA],
+        travelMode: 'DRIVING',
+        }, callback);
+    
+      function callback(response, status) {
+        console.log(response);
+      }
+       }
+       
+      JSONObject(jsonRespRouteDuration)  = new JSONObject(response)
+                                         .getJSONArray("rows")
+                                         .getJSONObject(0)
+                                         .getJSONArray ("elements")
+                                         .getJSONObject(0)
+                                         .getJSONObject("duration");
+ 
+ var distance = jsonRespRouteDuration.get("text").toString();
+console.log(distance)
+
+document.getElementById("eredmeny").innerHTML = "A kiszállítás várható időtartama"+(distance);
